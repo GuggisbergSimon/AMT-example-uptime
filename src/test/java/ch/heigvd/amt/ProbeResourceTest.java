@@ -12,7 +12,7 @@ class ProbeResourceTest {
     @Test
     void testHelloEndpoint() {
         given()
-          .when().get("/hello")
+          .when().get("/")
           .then()
              .statusCode(200)
              .body(containsString("Welcome to Uptime"));
