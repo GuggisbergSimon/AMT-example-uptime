@@ -1,4 +1,4 @@
-package ch.heigvd.amt;
+package ch.heigvd.amt.resources;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 
