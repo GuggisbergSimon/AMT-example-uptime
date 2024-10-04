@@ -1,0 +1,35 @@
+{#include layout}
+    {#title}Probe status{/title}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/probes">Probes</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Status
+            </li>
+        </ol>
+    </nav>
+
+    <h1>Status</h1>
+    <table class="table table-borderless">
+        <tr>
+            <th>URL</th>
+            <td>{probe.url}</td>
+        </tr>
+        <tr>
+            <th>Timestamp</th>
+            <td>{status.timestamp}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{status}</td>
+        </tr>
+
+        <tr>
+            <th>Duration</th>
+            <td>{probe.duration}</td>
+        </tr>
+    </table>
+{/include}

@@ -50,4 +50,19 @@ public class ProbeResource {
         probeService.getOrCreateProbe(url);
         return probesPage.data("probeList", probeService.listProbes());
     }
+
+    @Inject
+    Template statusPage;
+
+    @GET
+    @Path("/probes/{id}")
+    @Produces(MediaType.TEXT_HTML)
+    public TemplateInstance probes(@PathParam("id") long id) {
+        var probe = probeService.getProbeById(id);
+        var statusList = probeService.getProbeStatusListDesc(probe);
+        return statusPage
+                .data("probe", probe)
+                .data("lastStatus", statusList.getFirst())
+                .data("statusList", statusList);
+    }
 }

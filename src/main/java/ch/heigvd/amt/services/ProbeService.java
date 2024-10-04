@@ -64,4 +64,14 @@ public class ProbeService {
             e.printStackTrace();
         }
     }
+
+    public Probe getProbeById(long id) {
+        return entityManager.find(Probe.class, id);
+    }
+
+    public List<Status> getProbeStatusListDesc(Probe probe) {
+        return entityManager.createQuery("SELECT s FROM Status s WHERE s.probe = :probe ORDER BY s.timestamp DESC LIMIT 100", Status.class)
+                .setParameter("probe", probe)
+                .getResultList();
+    }
 }
