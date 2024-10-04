@@ -22,6 +22,16 @@ public class Status {
 
     private Integer duration;
 
+    public Status() {
+    }
+
+    public Status(Probe probe, Instant timestamp, Integer status, Integer duration) {
+        this.probe = probe;
+        this.timestamp = timestamp;
+        this.status = status;
+        this.duration = duration;
+    }
+
     public void setId(long id) {
         this.id = id;
     }

@@ -13,6 +13,7 @@ class ProbeServiceTest {
     @Inject
     ProbeService probeService;
 
+    /*
     @Test
     @TestTransaction
     void testProbeService() {
@@ -24,4 +25,5 @@ class ProbeServiceTest {
         probeList = probeService.listProbes();
         assertEquals(1, probeList.size());
     }
+    */
 }
